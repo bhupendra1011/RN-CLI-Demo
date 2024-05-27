@@ -31,8 +31,16 @@
 			<key>NSAllowsLocalNetworking</key>
 			<true/>
 		</dict>
+		<key>NSCameraUsageDescription</key>
+		<string>We need access to your camera for video conferencing</string>
 		<key>NSLocationWhenInUseUsageDescription</key>
 		<string></string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>We need access to your microphone for video conferencing</string>
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>audio</string>
+		</array>
 		<key>UILaunchStoryboardName</key>
 		<string>LaunchScreen</string>
 		<key>UIRequiredDeviceCapabilities</key>
@@ -47,9 +55,5 @@
 		</array>
 		<key>UIViewControllerBasedStatusBarAppearance</key>
 		<false/>
-		<key>NSCameraUsageDescription</key>
-		<string>We need access to your camera for video conferencing</string>
-		<key>NSMicrophoneUsageDescription</key>
-		<string>We need access to your microphone for video conferencing</string>
 	</dict>
 </plist>
