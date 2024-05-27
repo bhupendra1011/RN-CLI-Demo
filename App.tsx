@@ -6,16 +6,26 @@
  */
 
 import React from 'react';
-
-import {SafeAreaView} from 'react-native';
-
+import {SafeAreaView, useWindowDimensions} from 'react-native';
 import {WebView} from 'react-native-webview';
 
 function App(): React.JSX.Element {
-  const DEPLOYED_APP_URL = 'https://conferencing.agora.io/';
+  const {height, width} = useWindowDimensions();
+  const DEPLOYED_APP_URL = 'https://conferencing.agora.io';
+
   return (
     <SafeAreaView style={{flex: 1}}>
-      <WebView style={{flex: 1}} source={{uri: DEPLOYED_APP_URL}} />;
+      <WebView
+        allowsInlineMediaPlayback
+        mediaPlaybackRequiresUserAction={false}
+        source={{uri: DEPLOYED_APP_URL}}
+        // eslint-disable-next-line react-native/no-inline-styles
+        style={{
+          flex: 1,
+          height: height,
+          width: width,
+        }}
+      />
     </SafeAreaView>
   );
 }
